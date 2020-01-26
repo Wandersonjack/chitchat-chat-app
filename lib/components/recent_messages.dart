@@ -61,10 +61,7 @@ class RecentMessages extends StatelessWidget {
                           height: 25,
                           width: 45,
                           alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            color: Theme.of(context).primaryColor,
-                          ),
+                          decoration: kNewMessageDecoration,
                           child: Text('NEW', style: TextStyle(fontSize: 14,),),
                         ) : Text(''),
                       ],

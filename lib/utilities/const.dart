@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 //CATEGORY STYLES
-
+const kPrimaryColor = 0xFFFFC107;
 const kAccentColor = 0xFFFEF9EB;
 const kWhitColor = 0xFFFFFFFF;
 const kNewMessageColor = 0xFFFFF8E1;
@@ -83,3 +83,7 @@ final BoxDecoration kChatRead = BoxDecoration(
   ),
 );
 
+final BoxDecoration kNewMessageDecoration = BoxDecoration(
+  borderRadius: BorderRadius.circular(30),
+  color: Color(kPrimaryColor),
+);
