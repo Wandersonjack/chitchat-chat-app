@@ -5,6 +5,11 @@ const kPrimaryColor = 0xFFFFC107;
 const kAccentColor = 0xFFFEF9EB;
 const kWhitColor = 0xFFFFFFFF;
 const kNewMessageColor = 0xFFFFF8E1;
+const kDangerLightColor = 0xFFffebee;
+const kDangerColor = 0xFFf44336;
+
+const kAppbarTitleStyle = TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
+
 const kCategoryTextStyleActive = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.bold,
@@ -44,6 +49,7 @@ const kkUsernameTextStyle = TextStyle(
 
 //DIMENSIONS AND SHAPES
 final Radius kRounded = Radius.circular(30);
+final Radius kRounded15 = Radius.circular(15);
 
 final BoxDecoration kOverlayDecoration = BoxDecoration(
   color: Color(kAccentColor),
@@ -68,7 +74,7 @@ final BoxDecoration kOverlayDecorationWhite = BoxDecoration(
 
 // color: chat.unread ? Color(0xFFFFF8E1) : Colors.white,
 final BoxDecoration kChatUnread = BoxDecoration(
-  color:Color(kNewMessageColor) ,
+  color: Color(kNewMessageColor),
   borderRadius: BorderRadius.only(
     topRight: Radius.circular(15),
     bottomRight: Radius.circular(15),
@@ -76,7 +82,7 @@ final BoxDecoration kChatUnread = BoxDecoration(
 );
 
 final BoxDecoration kChatRead = BoxDecoration(
-  color:Color(kWhitColor),
+  color: Color(kWhitColor),
   borderRadius: BorderRadius.only(
     topRight: Radius.circular(15),
     bottomRight: Radius.circular(15),
@@ -86,4 +92,31 @@ final BoxDecoration kChatRead = BoxDecoration(
 final BoxDecoration kNewMessageDecoration = BoxDecoration(
   borderRadius: BorderRadius.circular(30),
   color: Color(kPrimaryColor),
+);
+
+//MESSAGE CUSTOM Decoration
+final BoxDecoration kMyMessageDecoration = BoxDecoration(
+    borderRadius: BorderRadius.only(
+      topLeft: kRounded15,
+      bottomLeft: kRounded15,
+    ),
+    color: Color(kAccentColor));
+
+final BoxDecoration kYourMessageDecoration = BoxDecoration(
+  borderRadius: BorderRadius.only(
+    topRight: kRounded,
+    bottomRight: kRounded,
+  ),
+  color: Color(kDangerLightColor),
+);
+
+final EdgeInsets kMessageSpacingRight =
+    EdgeInsets.only(top: 8, bottom: 8, right: 4);
+
+final EdgeInsets kMessageSpacingLeft =
+    EdgeInsets.only(top: 8, bottom: 8, left: 80);
+
+final EdgeInsets kMessagePadding = EdgeInsets.symmetric(
+  vertical: 15,
+  horizontal: 25,
 );

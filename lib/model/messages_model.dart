@@ -93,7 +93,7 @@ final List<Message> chats = [
     sender: mon,
     time: '04:34 PM',
     text: 'Hoje vai ter festa la na casa do Jonny!',
-    isLiked: false,
+    isLiked: true,
     unread: false,
   ),
   Message(
@@ -112,7 +112,7 @@ final List<Message> chats = [
   ),
   Message(
     sender: maia,
-    time: '02:30 pM',
+    time: '02:30 PM',
     text: 'I don\'t know how much it cost',
     isLiked: false,
     unread: true,
@@ -129,21 +129,21 @@ final List<Message> messages = [
     unread: true,
   ),
   Message(
-    sender: john,
+    sender: currentUser,
     time: '04:23 PM',
     text: 'Just walked my doge. She was super duper cute. The best pupper!!',
     isLiked: false,
     unread: true,
   ),
   Message(
-    sender: anna,
+    sender: john,
     time: '04:56 PM',
     text: 'How\'s the doggo?',
-    isLiked: false,
+    isLiked: true,
     unread: true,
   ),
   Message(
-    sender: mon,
+    sender: currentUser,
     time: '04:34 PM',
     text: 'Hoje vai ter festa la na casa do Jonny!',
     isLiked: false,
@@ -165,7 +165,7 @@ final List<Message> messages = [
   ),
   Message(
     sender: maia,
-    time: '02:30 pM',
+    time: '02:30 PM',
     text: 'I don\'t know how much it cost',
     isLiked: false,
     unread: true,

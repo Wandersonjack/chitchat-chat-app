@@ -1,4 +1,5 @@
 import 'package:chitchat/model/messages_model.dart';
+import 'package:chitchat/screens/chat_screen.dart';
 import 'package:chitchat/utilities/const.dart';
 import 'package:flutter/material.dart';
 
@@ -31,22 +32,29 @@ class FavoriteContacts extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: favorites.length,
               itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        radius: 35,
-                        backgroundImage: AssetImage(favorites[index].imgUrl),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        favorites[index].name,
-                        style: kFavoriteTextStyle,
-                      ),
-                    ],
+                return GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChatScreen(user: favorites[index],),
+                      )),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage(favorites[index].imgUrl),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          favorites[index].name,
+                          style: kFavoriteTextStyle,
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
