@@ -1,6 +1,12 @@
 # chitchat
 
 Chat app UI
+My main focus while studying and building this app was strong focus on UI in Flutter plus project architecture,
+where I've defined the layout constants files with all the box decoration, shapes and colors.
+
+
+Design from Cuberto https://dribbble.com/shots/6428387-Messenger-Mobile-Concept
+Studies source: Marcus NG https://www.youtube.com/watch?v=h-igXZCCrrc
 
 ## Getting Started
 
